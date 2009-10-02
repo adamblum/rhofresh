@@ -1,0 +1,16 @@
+<div class="toolbar">
+  <h1 id="pageTitle">
+    Invoices
+  </h1>
+</div>
+
+<ul id="invoices" title="Invoices" selected="true">
+    <a class="button right_button" href="Invoice/new" target="_self">New</a>
+  <%@invoices.each do |x|%>
+  
+  <li><%=link_to "#{x.client} #{x.amount}", :action => :show, :id => x.object%></li>
+  
+  <%end%>
+</ul> 
+ 
+ 

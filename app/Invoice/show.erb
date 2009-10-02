@@ -1,0 +1,43 @@
+<div class="toolbar">
+  <h1 id="pageTitle">
+    <%=@invoice.number%>
+  </h1>
+</div>
+
+<div class="panel" selected="true">
+
+<a class="button right_button" href="<%=url_for(:action => :edit, :id => @invoice.object)%>" target="_self">Edit</a>
+
+<table class="grid">
+  
+  <tr>
+  <td class="gridleft">Number</td>
+    <td class="gridright"><%=@invoice.number%></td>
+  </tr>
+  
+  <tr>
+  <td class="gridleft">Client</td>
+    <td class="gridright"><%=@invoice.client%></td>
+  </tr>
+  
+  <tr>
+  <td class="gridleft">Description</td>
+    <td class="gridright"><%=@invoice.description%></td>
+  </tr>
+
+  <td class="gridleft">Amount</td>
+    <td class="gridright"><%=@invoice.amount%></td>
+  </tr>
+  
+  <tr>
+  <td class="gridleft">Sent</td>
+    <td class="gridright"><%=@invoice.sent%></td>
+  </tr>
+  
+  <tr>
+  <td class="gridleft">Status</td>
+    <td class="gridright"><%=@invoice.status%></td>
+  </tr>
+  
+</table>
+</div> 

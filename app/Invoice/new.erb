@@ -1,0 +1,42 @@
+<div class="toolbar">
+	<h1 id="pageTitle">
+		New Invoice
+	</h1>
+</div>
+
+<form title="New Invoice" 
+	  class="panel"
+	  id="invoice_new_form" 
+	  method="POST" 
+	  action="<%=url_for(:action => :create)%>" selected="true">
+	<fieldset>
+		<input type="hidden" name="id" value="<%=@invoice.object%>"/>
+		
+		  <div class="row">
+			  <label>Number: </label>
+			  <input type="text" name="invoice[number]"/>
+		  </div>
+		
+		  <div class="row">
+			  <label>Client: </label>
+			  <input type="text" name="invoice[client]"/>
+		  </div>
+		
+		  <div class="row">
+			  <label>Description: </label>
+			  <input type="text" name="invoice[description]"/>
+		  </div>
+		
+		  <div class="row">
+			  <label>Sent: </label>
+			  <input type="text" name="invoice[sent]"/>
+		  </div>
+		
+		  <div class="row">
+			  <label>Status: </label>
+			  <input type="text" name="invoice[status]"/>
+		  </div>
+		
+	</fieldset>
+	<input type="submit" value="Create"/>
+</form>

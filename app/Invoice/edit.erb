@@ -1,0 +1,53 @@
+<div class="toolbar">
+  <h1 id="pageTitle">
+    Edit <%=@invoice.number%>
+  </h1>
+</div>
+
+<form title="Edit Invoice" 
+    class="panel" 
+    id="invoice_edit_form" 
+    method="POST" 
+    action="<%=url_for(:action => :update)%>" selected="true">
+  <fieldset>
+    <input type="hidden" name="id" value="<%=@invoice.object%>"/>
+    
+      <div class="row">
+        <label>Number: </label>
+        <input type="text" name="invoice[number]" value="<%=@invoice.number%>"/>
+      </div>
+    
+      <div class="row">
+        <label>Client: </label>
+        <input type="text" name="invoice[client]" value="<%=@invoice.client%>"/>
+      </div>
+    
+      <div class="row">
+        <label>Description: </label>
+        <input type="text" name="invoice[description]" value="<%=@invoice.description%>"/>
+      </div>
+
+      <div class="row">
+        <label>Amount: </label>
+        <input type="text" name="invoice[amount]" value="<%=@invoice.amount%>"/>
+      </div>
+    
+      <div class="row">
+        <label>Sent: </label>
+        <input type="text" name="invoice[sent]" value="<%=@invoice.sent%>"/>
+      </div>
+    
+      <div class="row">
+        <label>Status: </label>
+        <input type="text" name="invoice[status]" value="<%=@invoice.status%>"/>
+      </div>
+    
+  </fieldset>
+  <input type="submit" value="Update"/>
+  <p align="center">
+    <a href="<%=url_for(:action => :delete, :id => @invoice.object)%>">
+      <font color="#990000">Delete</font>
+    </a>
+  </p>
+</form> 
+ 
