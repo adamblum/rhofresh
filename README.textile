@@ -1,0 +1,18 @@
+h1. RhoFresh
+Synchronizes FreshBooks invoice information to smartphones.  
+
+h2. How To Build
+* Must have the Rhodes framework (http://rhomobile.com/products/rhodes) installed.
+* Build with rake script. For example:
+  rake run:android:app
+
+h2. How To Setup
+* Put the invoice.rb file here into the lib directory on your RhoSync server
+* Start up your RhoSync server
+* Create a user on your RhoSync server
+* Create an app called RhoFresh
+* Create a source called Invoice
+* Set the URL to be your FreshBooks API URL
+* Set the login to be your FreshBooks API token
+* Test by clicking Show Records on your Invoice source
+
